@@ -15,6 +15,11 @@ connectDB();
 
 seedDatabase();
 
+app.get("/",(req,res)=>{
+    res.send("Welcome to backend");
+})
+  
+
 app.use("/api", restaurantRoutes);
 
 app.listen(PORT, () => {
